@@ -20,8 +20,6 @@ public class MVELLifeCycleManagerTest {
 	/**
 	 * Tests that a user who is in the ExcludedOwners list of the {@link Task task's) {@link PeopleAssignments peopleAssignment's) object is
 	 * not allowed to execute operations on the given task. We expect to get a {@link PermissionDeniedException}.
-	 * 
-	 * @author <a href="mailto:duncan.doyle@redhat.com">Duncan Doyle</a>
 	 */
 	@Test(expected = PermissionDeniedException.class)
 	public void testClaimIsAllowedExcludedOwner() {
@@ -63,8 +61,6 @@ public class MVELLifeCycleManagerTest {
 	 * Tests that a user who is in the ExcludedOwners list of the {@link Task task's) {@link PeopleAssignments peopleAssignment's) object IS
 	 * allowed to execute operations on the given task IF the person is also a Business Administrator. We expect to get a
 	 * {@link PermissionDeniedException}.
-	 * 
-	 * @author <a href="mailto:duncan.doyle@redhat.com">Duncan Doyle</a>
 	 */
 	@Test
 	public void testDelegateIsAllowedExcludedOwnerBusinessAdministrator() {
