@@ -227,12 +227,6 @@ public class MVELLifeCycleManager implements LifeCycleManager {
         return false;
     }
     
-    private boolean isExcludedOwner(Task task, User user) {
-    	
-    	
-    	return false;
-    }
-
     private void commands(final OperationCommand command, final Task task, final User user,
             final OrganizationalEntity targetEntity, OrganizationalEntity...entities) {
 
