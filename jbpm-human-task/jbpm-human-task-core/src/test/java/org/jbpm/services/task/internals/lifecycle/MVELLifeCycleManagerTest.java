@@ -76,7 +76,10 @@ public class MVELLifeCycleManagerTest {
 		str += "name =  'This is my task name' })";
 		InternalTask task = (InternalTask) TaskFactory.evalTask(new StringReader(str));
 
-		// Test whether we can claim the task. This should not be possible.
+		/*
+		 * Test whether we can delegate the task. Because the user is a BusinessAdministrator, this should be possible, even if the owner is
+		 * in the ExcludedOwners list.
+		 */
 		Operation operation = Operation.Delegate;
 		List<OperationCommand> operationCommands = new ArrayList<>();
 		OperationCommand operationCommand = new OperationCommand();
